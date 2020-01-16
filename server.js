@@ -36,10 +36,11 @@ function handleEvent(event) {
   }
   
   console.log('replayMessage');
-  return client.replyMessage(event.replyToken, {
+  const reply = client.replyMessage(event.replyToken, {
     type: 'text',
     text: event.message.text //実際に返信の言葉を入れる箇所
   });
+  return Promise.resolve(reply);
 }
 
 app.listen(PORT);
