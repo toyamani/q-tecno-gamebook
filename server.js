@@ -31,9 +31,11 @@ const client = new line.Client(config);
 
 function handleEvent(event) {
   if (event.type !== 'message' || event.message.type !== 'text') {
+    console.log('not text');
     return Promise.resolve(null);
   }
-
+  
+  console.log('replayMessage');
   return client.replyMessage(event.replyToken, {
     type: 'text',
     text: event.message.text //実際に返信の言葉を入れる箇所
