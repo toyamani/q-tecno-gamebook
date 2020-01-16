@@ -2,11 +2,11 @@
 
 const express = require('express');
 const line = require('@line/bot-sdk');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 const config = {
-    channelSecret: '78c588005f20dda64e319c90eaedc5d1',
-    channelAccessToken: 'oHaAdysWKNPVX8pbYUipxAKkldn12Y6Ckhf/NO/EyaeKi9gSBP8OtktiSYGNQVkwwJHQDplKtSY/DC/p2qTLtrDk7hV523Bbj3EnWxMUZQQ2Zx31A/YvzeN/sFdsAXtl0uVrJyeRiN32FAVeNbbnswdB04t89/1O/w1cDnyilFU='
+    channelSecret: process.env.SECRET_KEY,
+    channelAccessToken: process.env.ACCESS_TOKEN
 };
 
 const app = express();
