@@ -108,12 +108,6 @@ function handleEvent(event) {
 //    text: event.message.text //実際に返信の言葉を入れる箇所
 //  }
   return client.replyMessage(evnet.replyToken, message)
-    .then(() => {
-      callback(null, {});
-    })
-    .catch((error) => {
-        callback(null, {});
-    });
 }
 
 app.listen(PORT);
