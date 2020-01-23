@@ -107,7 +107,7 @@ function handleEvent(event) {
 //    type: 'text',
 //    text: event.message.text //実際に返信の言葉を入れる箇所
 //  }
-  return client.replyMessage(evnet.replyToken, message)
+  return client.replyMessage(evnet.replyToken, message);
 }
 
 app.listen(PORT);
