@@ -103,10 +103,10 @@ function handleEvent(event) {
         "imageSize": "cover"
     }
   } 
-'  return client.replyMessage(event.replyToken, {
-'    type: 'text',
-'    text: event.message.text //実際に返信の言葉を入れる箇所
-'  }
+//  return client.replyMessage(event.replyToken, {
+//    type: 'text',
+//    text: event.message.text //実際に返信の言葉を入れる箇所
+//  }
   return client.replyMessage(evnet.event[0].replyToken, message)
     .then(() => {
       callback(null, {});
