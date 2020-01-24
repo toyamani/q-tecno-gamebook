@@ -12,84 +12,85 @@ const app = express();
 
 
 function handleEvent(event) {
-  if (event.type !== 'message' || event.message.type !== 'text') {
-    console.log('not text');
-    return Promise.resolve(null);
-  }
-
-  console.log('replayMessage');
-  const message = {
-    type: 'template',
-    altText: 'this is a carousel template',
-    template: {
-      type: 'carousel',
-      columns: [
-        {
-          thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
-          imageBackgroundColor: '#FFFFFF',
-          title: 'this is menu',
-          text: 'description',
-          defaultAction: {
-            type: 'uri',
-            label: 'View detail',
-            uri: 'http://example.com/page/123',
-          },
-          actions: [
-            {
-              type: 'postback',
-              label: 'Buy',
-              data: 'action=buy&itemid=111',
-            },
-            {
-              type: 'postback',
-              label: 'Add to cart',
-              data: 'action=add&itemid=111',
-            },
-            {
+  if (event.type === 'message' || event.message.type === 'text') {
+    console.log('replayMessage');
+    const message = {
+      type: 'template',
+      altText: 'this is a carousel template',
+      template: {
+        type: 'carousel',
+        columns: [
+          {
+            thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
+            imageBackgroundColor: '#FFFFFF',
+            title: 'this is menu',
+            text: 'description',
+            defaultAction: {
               type: 'uri',
               label: 'View detail',
-              uri: 'http://example.com/page/111',
+              uri: 'http://example.com/page/123',
             },
-          ],
-        },
-        {
-          thumbnailImageUrl: 'https://example.com/bot/images/item2.jpg',
-          imageBackgroundColor: '#000000',
-          title: 'this is menu',
-          text: 'description',
-          defaultAction: {
-            type: 'uri',
-            label: 'View detail',
-            uri: 'http://example.com/page/222',
+            actions: [
+              {
+                type: 'postback',
+                label: 'Buy',
+                data: 'action=buy&itemid=111',
+              },
+              {
+                type: 'postback',
+                label: 'Add to cart',
+                data: 'action=add&itemid=111',
+              },
+              {
+                type: 'uri',
+                label: 'View detail',
+                uri: 'http://example.com/page/111',
+              },
+            ],
           },
-          actions: [
-            {
-              type: 'postback',
-              label: 'Buy',
-              data: 'action=buy&itemid=222',
-            },
-            {
-              type: 'postback',
-              label: 'Add to cart',
-              data: 'action=add&itemid=222',
-            },
-            {
+          {
+            thumbnailImageUrl: 'https://example.com/bot/images/item2.jpg',
+            imageBackgroundColor: '#000000',
+            title: 'this is menu',
+            text: 'description',
+            defaultAction: {
               type: 'uri',
               label: 'View detail',
               uri: 'http://example.com/page/222',
             },
-          ],
-        },
-      ],
-      imageAspectRatio: 'rectangle',
-      imageSize: 'cover',
-    },
-  };
-  //  return client.replyMessage(event.replyToken, {
-  //    type: 'text',
-  //    text: event.message.text //実際に返信の言葉を入れる箇所
-  //  }
-  return client.replyMessage(event.replyToken, message);
+            actions: [
+              {
+                type: 'postback',
+                label: 'Buy',
+                data: 'action=buy&itemid=222',
+              },
+              {
+                type: 'postback',
+                label: 'Add to cart',
+                data: 'action=add&itemid=222',
+              },
+              {
+                type: 'uri',
+                label: 'View detail',
+                uri: 'http://example.com/page/222',
+              },
+            ],
+          },
+        ],
+        imageAspectRatio: 'rectangle',
+        imageSize: 'cover',
+      },
+    };
+    return client.replyMessage(event.replyToken, message);
+  }
+  if (event.type === 'postback') {
+    const message = {
+      type: 'text',
+      text: 'Hello, world',
+    };
+    return client.replyMessage(event.replyToken, message);
+  }
+  return Promise.resolve(null);
 }
 
 
