@@ -1,5 +1,6 @@
 const express = require('express');
 const line = require('@line/bot-sdk');
+const message = require('./message.json');
 
 const PORT = process.env.PORT || 5000;
 
@@ -14,81 +15,14 @@ const app = express();
 function handleEvent(event) {
   if (event.type === 'message' && event.message.type === 'text') {
     console.log('replayMessage');
-    const message = {
-      type: 'template',
-      altText: 'this is a carousel template',
-      template: {
-        type: 'carousel',
-        columns: [
-          {
-            thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
-            imageBackgroundColor: '#FFFFFF',
-            title: 'this is menu',
-            text: 'description',
-            defaultAction: {
-              type: 'uri',
-              label: 'View detail',
-              uri: 'http://example.com/page/123',
-            },
-            actions: [
-              {
-                type: 'postback',
-                label: 'Buy',
-                data: 'action=buy&itemid=111',
-              },
-              {
-                type: 'postback',
-                label: 'Add to cart',
-                data: 'action=add&itemid=111',
-              },
-              {
-                type: 'uri',
-                label: 'View detail',
-                uri: 'http://example.com/page/111',
-              },
-            ],
-          },
-          {
-            thumbnailImageUrl: 'https://example.com/bot/images/item2.jpg',
-            imageBackgroundColor: '#000000',
-            title: 'this is menu',
-            text: 'description',
-            defaultAction: {
-              type: 'uri',
-              label: 'View detail',
-              uri: 'http://example.com/page/222',
-            },
-            actions: [
-              {
-                type: 'postback',
-                label: 'Buy',
-                data: 'action=buy&itemid=222',
-              },
-              {
-                type: 'postback',
-                label: 'Add to cart',
-                data: 'action=add&itemid=222',
-              },
-              {
-                type: 'uri',
-                label: 'View detail',
-                uri: 'http://example.com/page/222',
-              },
-            ],
-          },
-        ],
-        imageAspectRatio: 'rectangle',
-        imageSize: 'cover',
-      },
-    };
     return client.replyMessage(event.replyToken, message);
   }
   if (event.type === 'postback') {
-    const message = {
+    const message1 = {
       type: 'text',
       text: 'Hello, world',
     };
-    return client.replyMessage(event.replyToken, message);
+    return client.replyMessage(event.replyToken, message1);
   }
   return Promise.resolve(null);
 }
