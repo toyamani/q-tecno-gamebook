@@ -12,7 +12,7 @@ const app = express();
 
 
 function handleEvent(event) {
-  if (event.type === 'message' || event.message.type === 'text') {
+  if (event.type === 'message' && event.message.type === 'text') {
     console.log('replayMessage');
     const message = {
       type: 'template',
