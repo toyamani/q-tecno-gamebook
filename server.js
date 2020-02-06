@@ -18,7 +18,7 @@ function handleEvent(event) {
       switch (event.message.type) {
         case 'text': {
           if (event.message.text === '迷惑メールモードSTART') {
-            return client.replayMessage(event.replyToken, messagejson.default);
+            return client.replayMessage(event.replyToken, messagejson);
           }
           const texttypefalse = {
             type: 'text',
