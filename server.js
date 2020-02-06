@@ -56,7 +56,7 @@ function handleEvent(event) {
     }
 
     case 'postback': {
-      switch (event.data) {
+      switch (event.postback.data) {
         case 'trueMailOpen': {
           message = {
             type: 'text',

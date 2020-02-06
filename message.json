@@ -24,7 +24,7 @@
         {
           "type": "postback",
           "label": "NotOpen",
-          "data": "tureMailNotOpen"
+          "data": "trueMailNotOpen"
         },
         {
           "type": "postback",
