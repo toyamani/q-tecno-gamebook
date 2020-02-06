@@ -21,7 +21,19 @@ function handleEvent(event) {
         case 'text': {
           switch (event.message.text) {
             case '迷惑メールモードSTART': {
-              message = messagejson.truemail;
+              message = messagejson.trueMail;
+              break;
+            }
+            case 'Q-TECNO QUEST START': {
+              message = messagejson.maintenance;
+              break;
+            }
+            case 'GIVE UP': {
+              message = messagejson.maintenance;
+              break;
+            }
+            case 'HELP': {
+              message = messagejson.maintenance;
               break;
             }
             default: {
@@ -45,10 +57,24 @@ function handleEvent(event) {
 
     case 'postback': {
       switch (event.data) {
-        case 'truemailopen': {
+        case 'trueMailOpen': {
           message = {
             type: 'text',
             text: 'Hello, world',
+          };
+          break;
+        }
+        case 'trueMailNotOpen': {
+          message = {
+            type: 'text',
+            text: 'Miss!!!',
+          };
+          break;
+        }
+        case 'trueMailDelete': {
+          message = {
+            type: 'text',
+            text: 'Miss!!! Do not delete!!!',
           };
           break;
         }
