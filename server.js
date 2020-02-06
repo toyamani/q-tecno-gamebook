@@ -69,7 +69,7 @@ function handleEvent(event) {
       };
     }
   }
-  return client.replayMessage(event.replayToken, message);
+  return client.replyMessage(event.replayToken, message);
 }
 
 
