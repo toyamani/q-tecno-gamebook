@@ -25,7 +25,6 @@ function handleEvent(event) {
             text: 'wrong text',
           };
           return client.replayMessage(event.replayToken, texttypefalse);
-          break;
         }
         default: {
           const messagetypefalse = {
@@ -35,7 +34,6 @@ function handleEvent(event) {
           return client.replyMessage(event.replayToken, messagetypefalse);
         }
       }
-      break;
     }
     case 'postback': {
       if (event.data === 'truemailopen') {
@@ -45,7 +43,11 @@ function handleEvent(event) {
         };
         return client.replyMessage(event.replyToken, postbackmessage);
       }
-      break;
+      const postbackfalse = {
+        type: 'text',
+        text: 'wrong postback',
+      };
+      return client.replyMessage(event.replyToken, postbackfalse);
     }
     default: {
       const messagenotevent = {
