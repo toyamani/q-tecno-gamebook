@@ -1,6 +1,6 @@
 const express = require('express');
 const line = require('@line/bot-sdk');
-const message = require('./message.json');
+const messagejson = require('./message.json');
 
 const PORT = process.env.PORT || 5000;
 
@@ -13,16 +13,47 @@ const app = express();
 
 
 function handleEvent(event) {
-  if (event.type === 'message' && event.message.type === 'text') {
-    console.log('replayMessage');
-    return client.replyMessage(event.replyToken, message);
-  }
-  if (event.type === 'postback') {
-    const message1 = {
-      type: 'text',
-      text: 'Hello, world',
-    };
-    return client.replyMessage(event.replyToken, message1);
+  switch (event.type) {
+    case 'message': {
+      switch (event.message.type) {
+        case 'text': {
+          if (event.message.text === '迷惑メールモードSTART') {
+            return client.replayMessage(event.replyToken, messagejson.truemail);
+          }
+          const texttypefalse = {
+            type: 'text',
+            text: 'wrong text',
+          };
+          return client.replayMessage(event.replayToken, texttypefalse);
+          break;
+        }
+        default: {
+          const messagetypefalse = {
+            type: 'text',
+            text: 'Not text',
+          };
+          return client.replyMessage(event.replayToken, messagetypefalse);
+        }
+      }
+      break;
+    }
+    case 'postback': {
+      if (event.data === 'truemailopen') {
+        const postbackmessage = {
+          type: 'text',
+          text: 'Hello, world',
+        };
+        return client.replyMessage(event.replyToken, postbackmessage);
+      }
+      break;
+    }
+    default: {
+      const messagenotevent = {
+        type: 'text',
+        text: 'Not event',
+      };
+      return client.replayMessage(event.replayToken, messagenotevent);
+    }
   }
   return Promise.resolve(null);
 }
