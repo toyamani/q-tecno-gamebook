@@ -13,51 +13,63 @@ const app = express();
 
 
 function handleEvent(event) {
+  let message;
+
   switch (event.type) {
     case 'message': {
       switch (event.message.type) {
         case 'text': {
-          if (event.message.text === '迷惑メールモードSTART') {
-            return client.replayMessage(event.replyToken, messagejson.truemail);
+          switch (event.message.text) {
+            case '迷惑メールモードSTART': {
+              message = messagejson.truemail;
+              break;
+            }
+            default: {
+              message = {
+                type: 'text',
+                text: 'wrong text',
+              };
+            }
           }
-          const texttypefalse = {
-            type: 'text',
-            text: 'wrong text',
-          };
-          return client.replayMessage(event.replayToken, texttypefalse);
+          break;
         }
         default: {
-          const messagetypefalse = {
+          message = {
             type: 'text',
             text: 'Not text',
           };
-          return client.replyMessage(event.replayToken, messagetypefalse);
         }
       }
+      break;
     }
+
     case 'postback': {
-      if (event.data === 'truemailopen') {
-        const postbackmessage = {
-          type: 'text',
-          text: 'Hello, world',
-        };
-        return client.replyMessage(event.replyToken, postbackmessage);
+      switch (event.data) {
+        case 'truemailopen': {
+          message = {
+            type: 'text',
+            text: 'Hello, world',
+          };
+          break;
+        }
+        default: {
+          message = {
+            type: 'text',
+            text: 'wrong postback',
+          };
+        }
       }
-      const postbackfalse = {
-        type: 'text',
-        text: 'wrong postback',
-      };
-      return client.replyMessage(event.replyToken, postbackfalse);
+      break;
     }
+
     default: {
-      const messagenotevent = {
+      message = {
         type: 'text',
         text: 'Not event',
       };
-      return client.replayMessage(event.replayToken, messagenotevent);
     }
   }
-  return Promise.resolve(null);
+  return client.replayMessage(event.replayToken, message);
 }
 
 
