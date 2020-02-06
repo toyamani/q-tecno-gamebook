@@ -1,4 +1,4 @@
-{
+[
   "truemail": {
     "type": "template",
     "altText": "This is a buttons template",
@@ -40,4 +40,4 @@
     "text": "メンテナンス中です"
   }
 
-}
+]
