@@ -69,7 +69,8 @@ function handleEvent(event) {
       };
     }
   }
-  return client.replyMessage(event.replayToken, message);
+  console.log(message);
+  return client.replyMessage(event.replyToken, message);
 }
 
 
