@@ -1,5 +1,5 @@
 {
-  "turemail": {
+  "truemail": {
     "type": "template",
     "altText": "This is a buttons template",
     "template": {
@@ -18,8 +18,8 @@
         "actions": [
             {
               "type": "postback",
-              "label": "Buy",
-              "data": "action=buy&itemid=123"
+              "label": "open",
+              "data": "truemailopen"
             },
             {
               "type": "postback",
