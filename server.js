@@ -37,19 +37,13 @@ function handleEvent(event) {
               break;
             }
             default: {
-              message = {
-                type: 'text',
-                text: 'wrong text',
-              };
+              message = messagejson.error.wrongText;
             }
           }
           break;
         }
         default: {
-          message = {
-            type: 'text',
-            text: 'Not text',
-          };
+          message = messagejson.error.wrongMessageType;
         }
       }
       break;
@@ -58,41 +52,26 @@ function handleEvent(event) {
     case 'postback': {
       switch (event.postback.data) {
         case 'trueMailOpen': {
-          message = {
-            type: 'text',
-            text: 'Hello, world',
-          };
+          message = messagejson.postback.trueMail.open;
           break;
         }
         case 'trueMailNotOpen': {
-          message = {
-            type: 'text',
-            text: 'Miss!!!',
-          };
+          message = messagejson.postback.trueMail.notOpen;
           break;
         }
         case 'trueMailDelete': {
-          message = {
-            type: 'text',
-            text: 'Miss!!! Do not delete!!!',
-          };
+          message = messagejson.postback.trueMail.delete;
           break;
         }
         default: {
-          message = {
-            type: 'text',
-            text: 'wrong postback',
-          };
+          message = messagejson.error.wrongPostback;
         }
       }
       break;
     }
 
     default: {
-      message = {
-        type: 'text',
-        text: 'Not event',
-      };
+      message = messagejson.error.notEvent;
     }
   }
   console.log(message);

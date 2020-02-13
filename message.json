@@ -35,9 +35,58 @@
     }
   },
 
+  "postback": {
+    "trueMail": {
+      "open": {
+        "type": "text",
+        "text": "正解です！"
+      },
+      "notOpen": {
+        "type": "text",
+        "text": "間違いです！迷惑メールじゃないので開いてください！"
+      },
+      "delete": {
+        "type": "text",
+        "text": "間違いです！大切なメールなので、消さないでください！"
+      }
+    },
+    "falseMail": {
+      "open": {
+        "type": "text",
+        "text": "ウィルスに感染しました！"
+      },
+      "notOpen": {
+        "type": "text",
+        "text": "そうです！開いてはいけません！"
+      },
+      "delete": {
+        "type": "text",
+        "text": "そうです！削除してください！"
+      }
+    }
+  },
+
   "maintenance": {
     "type": "text",
     "text": "メンテナンス中です"
-  }
+  },
 
+  "error": {
+    "wrongMessageType": {
+      "type": "text",
+      "text": "そのメッセージには、対応できません！"
+    },
+    "wrongText": {
+      "type": "text",
+      "text": "そのテキストには、対応できません！"
+    },
+    "notEvent": {
+      "type": "text",
+      "text": "イベントではありません！"
+    },
+    "wrongPostback": {
+      "type": "text",
+      "text": "POSTBACKが誤っています！"
+    }
+  }
 }
