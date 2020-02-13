@@ -11,9 +11,7 @@ const config = {
 const client = new line.Client(config);
 const app = express();
 
-const getRandomInt = (max) => {
-  return Math.floor(Math.random() * Math.floor(max));
-};
+const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
 const handleEvent = (event) => {
   let message;
