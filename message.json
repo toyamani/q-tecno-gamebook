@@ -35,6 +35,42 @@
     }
   },
 
+  "falseMail": {
+    "type": "template",
+    "altText": "This is a buttons template",
+    "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "You receved mail,but false mail!!!",
+      "text": "Please select action",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "http://example.com/page/123"
+      },
+      "actions": [
+        {
+          "type": "postback",
+          "label": "Open",
+          "data": "falseMailOpen"
+        },
+        {
+          "type": "postback",
+          "label": "NotOpen",
+          "data": "falseMailNotOpen"
+        },
+        {
+          "type": "postback",
+          "label": "Delete",
+          "data": "falseMailDelete"
+        }
+      ]
+    }
+  },
+
   "postback": {
     "trueMail": {
       "open": {

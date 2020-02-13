@@ -11,8 +11,11 @@ const config = {
 const client = new line.Client(config);
 const app = express();
 
+const getRandomInt = (max) => {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
-function handleEvent(event) {
+const handleEvent = (event) => {
   let message;
 
   switch (event.type) {
@@ -21,8 +24,16 @@ function handleEvent(event) {
         case 'text': {
           switch (event.message.text) {
             case '迷惑メールモードSTART': {
-              message = messagejson.trueMail;
+              switch (getRandomInt(2)) {
+                case 0:{
+                  message = messagejson.trueMail;
+                  break;
+                }
+                default: {
+                  message = messagejson.falseMail;
+                }
               break;
+              }
             }
             case 'Q-TECNO QUEST START': {
               message = messagejson.maintenance;
@@ -61,6 +72,18 @@ function handleEvent(event) {
         }
         case 'trueMailDelete': {
           message = messagejson.postback.trueMail.delete;
+          break;
+        }
+        case 'falseMailOpen': {
+          message = messagejson.postback.falseMail.open;
+          break;
+        }
+        case 'falseMailNotOpen': {
+          message = messagejson.postback.falseMail.notOpen;
+          break;
+        }
+        case 'falseMailDelete': {
+          message = messagejson.postback.falseMail.delete;
           break;
         }
         default: {
