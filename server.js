@@ -13,7 +13,7 @@ const app = express();
 
 const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
-}
+};
 
 const handleEvent = (event) => {
   let message;
@@ -25,15 +25,15 @@ const handleEvent = (event) => {
           switch (event.message.text) {
             case '迷惑メールモードSTART': {
               switch (getRandomInt(2)) {
-                case 0:{
+                case 0: {
                   message = messagejson.trueMail;
                   break;
                 }
                 default: {
                   message = messagejson.falseMail;
                 }
-              break;
               }
+              break;
             }
             case 'Q-TECNO QUEST START': {
               message = messagejson.maintenance;
@@ -99,7 +99,7 @@ const handleEvent = (event) => {
   }
   console.log(message);
   return client.replyMessage(event.replyToken, message);
-}
+};
 
 
 app.get('/', (req, res) => res.send('Hello LINE BOT!(GET)')); // ブラウザ確認用(無くても問題ない)
