@@ -8,11 +8,6 @@
       "imageSize": "cover",
       "title": "メールが届きました！",
       "text": "あなたは何をしますか？",
-      "defaultAction": {
-        "type": "uri",
-        "label": "メールの内容を見る",
-        "uri": "./images/img1.jpg"
-      },
       "actions": [
         {
           "type": "postback",
