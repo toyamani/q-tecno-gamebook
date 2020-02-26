@@ -4,31 +4,29 @@
     "altText": "This is a buttons template",
     "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
-      "imageAspectRatio": "rectangle",
+      "thumbnailImageUrl": "./images/img1.jpg",
       "imageSize": "cover",
-      "imageBackgroundColor": "#FFFFFF",
-      "title": "You receved mail",
-      "text": "Please select action",
+      "title": "メールが届きました！",
+      "text": "あなたは何をしますか？",
       "defaultAction": {
         "type": "uri",
-        "label": "View detail",
-        "uri": "http://example.com/page/123"
+        "label": "メールの内容を見る",
+        "uri": "./images/img1.jpg"
       },
       "actions": [
         {
           "type": "postback",
-          "label": "Open",
+          "label": "URLを開く",
           "data": "trueMailOpen"
         },
         {
           "type": "postback",
-          "label": "NotOpen",
+          "label": "URLを開かない",
           "data": "trueMailNotOpen"
         },
         {
           "type": "postback",
-          "label": "Delete",
+          "label": "メールを削除する",
           "data": "trueMailDelete"
         }
       ]
