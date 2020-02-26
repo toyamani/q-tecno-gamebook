@@ -4,7 +4,7 @@
     "altText": "This is a buttons template",
     "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://github.com/toyamani/q-tecno-gamebook/blob/master/images/img1.jpg",
+      "thumbnailImageUrl": "https://developers.line.me/ja/docs/messaging-api/message-types/#buttons-template",
       "imageSize": "cover",
       "title": "メールが届きました！",
       "text": "あなたは何をしますか？",
