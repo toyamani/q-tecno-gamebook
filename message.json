@@ -4,7 +4,7 @@
     "altText": "This is a buttons template",
     "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://developers.line.me/ja/docs/messaging-api/message-types/#buttons-template",
+      "thumbnailImageUrl": "https://i.gyazo.com/e772c3b48a07716226f7184d7f417cda.png",
       "imageSize": "cover",
       "title": "メールが届きました！",
       "text": "あなたは何をしますか？",
