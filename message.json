@@ -8,6 +8,11 @@
       "imageSize": "cover",
       "title": "メールが届きました！",
       "text": "あなたは何をしますか？",
+      "defaultAction": {
+        "type": "uri",
+        "label": "メールの内容を見る",
+        "uri": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
+      },
       "actions": [
         {
           "type": "postback",
@@ -67,17 +72,19 @@
   "postback": {
     "trueMail": {
       "open": {
-        "type": "text",
-        "text": "正解です！"
+        "type": "video",
+        "originalContentUrl": "https://drive.google.com/uc?id=18zola2jG4CFD2pnKdkVzPOCH-G8R0uu7",
+        "previewImageUrl": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
       },
       "notOpen": {
-          "type": "video",
-          "originalContentUrl": "https://example.com/original.mp4",
-          "previewImageUrl": "https://example.com/preview.jpg"
+        "type": "video",
+        "originalContentUrl": "https://drive.google.com/uc?id=1yv5EOBk2KuumaMBRziwQNNRmydnEb6K2",
+        "previewImageUrl": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
       },
       "delete": {
-        "type": "text",
-        "text": "間違いです！大切なメールなので、消さないでください！"
+        "type": "video",
+        "originalContentUrl": "https://drive.google.com/uc?id=1yv5EOBk2KuumaMBRziwQNNRmydnEb6K2",
+        "previewImageUrl": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
       }
     },
     "falseMail": {
