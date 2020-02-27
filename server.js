@@ -1,27 +1,27 @@
-const express = require('express');
-const line = require('@line/bot-sdk');
-const messagejson = require('./message.json');
+const express = require("express");
+const line = require("@line/bot-sdk");
+const messagejson = require("./message.json");
 
 const PORT = process.env.PORT || 5000;
 
 const config = {
   channelSecret: process.env.SECRET_KEY,
-  channelAccessToken: process.env.ACCESS_TOKEN,
+  channelAccessToken: process.env.ACCESS_TOKEN
 };
 const client = new line.Client(config);
 const app = express();
 
-const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
 
-const handleEvent = (event) => {
+const handleEvent = event => {
   let message;
 
   switch (event.type) {
-    case 'message': {
+    case "message": {
       switch (event.message.type) {
-        case 'text': {
+        case "text": {
           switch (event.message.text) {
-            case '迷惑メールモードSTART': {
+            case "迷惑メールモードSTART": {
               switch (getRandomInt(2)) {
                 case 0: {
                   message = messagejson.trueMail;
@@ -33,15 +33,15 @@ const handleEvent = (event) => {
               }
               break;
             }
-            case 'Q-TECNO QUEST START': {
+            case "Q-TECNO QUEST START": {
               message = messagejson.maintenance;
               break;
             }
-            case 'GIVE UP': {
+            case "GIVE UP": {
               message = messagejson.maintenance;
               break;
             }
-            case 'HELP': {
+            case "HELP": {
               message = messagejson.maintenance;
               break;
             }
@@ -58,29 +58,29 @@ const handleEvent = (event) => {
       break;
     }
 
-    case 'postback': {
+    case "postback": {
       switch (event.postback.data) {
-        case 'trueMailOpen': {
+        case "trueMailOpen": {
           message = messagejson.postback.trueMail.open;
           break;
         }
-        case 'trueMailNotOpen': {
+        case "trueMailNotOpen": {
           message = messagejson.postback.trueMail.notOpen;
           break;
         }
-        case 'trueMailDelete': {
+        case "trueMailDelete": {
           message = messagejson.postback.trueMail.delete;
           break;
         }
-        case 'falseMailOpen': {
+        case "falseMailOpen": {
           message = messagejson.postback.falseMail.open;
           break;
         }
-        case 'falseMailNotOpen': {
+        case "falseMailNotOpen": {
           message = messagejson.postback.falseMail.notOpen;
           break;
         }
-        case 'falseMailDelete': {
+        case "falseMailDelete": {
           message = messagejson.postback.falseMail.delete;
           break;
         }
@@ -99,13 +99,12 @@ const handleEvent = (event) => {
   return client.replyMessage(event.replyToken, message);
 };
 
-
-app.get('/', (req, res) => res.send('Hello LINE BOT!(GET)')); // ブラウザ確認用(無くても問題ない)
-app.post('/webhook', line.middleware(config), (req, res) => {
+app.get("/", (req, res) => res.send("Hello LINE BOT!(GET)")); // ブラウザ確認用(無くても問題ない)
+app.post("/webhook", line.middleware(config), (req, res) => {
   console.log(req.body.events);
-  Promise
-    .all(req.body.events.map(handleEvent))
-    .then((result) => res.json(result));
+  Promise.all(req.body.events.map(handleEvent)).then(result =>
+    res.json(result)
+  );
 });
 
 app.listen(PORT);
