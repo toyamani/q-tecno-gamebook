@@ -4,14 +4,14 @@
     "altText": "This is a buttons template",
     "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4",
+      "thumbnailImageUrl": "https://drive.google.com/uc?id=1kMn54QqHrbP0dwaB0EZYS6nDlVqli13k",
       "imageSize": "cover",
       "title": "メールが届きました！",
       "text": "あなたは何をしますか？",
       "defaultAction": {
         "type": "uri",
         "label": "メールの内容を見る",
-        "uri": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
+        "uri": "https://drive.google.com/uc?id=1kMn54QqHrbP0dwaB0EZYS6nDlVqli13k"
       },
       "actions": [
         {
@@ -38,7 +38,7 @@
     "altText": "This is a buttons template",
     "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+      "thumbnailImageUrl": "https://drive.google.com/uc?id=1kgylYF9DDl73GBrJBf5RIGAN0yMLXBIs",
       "imageAspectRatio": "rectangle",
       "imageSize": "cover",
       "imageBackgroundColor": "#FFFFFF",
@@ -47,7 +47,7 @@
       "defaultAction": {
         "type": "uri",
         "label": "View detail",
-        "uri": "http://example.com/page/123"
+        "uri": "https://drive.google.com/uc?id=1kgylYF9DDl73GBrJBf5RIGAN0yMLXBIs"
       },
       "actions": [
         {
@@ -74,17 +74,17 @@
       "open": {
         "type": "video",
         "originalContentUrl": "https://drive.google.com/uc?id=18zola2jG4CFD2pnKdkVzPOCH-G8R0uu7",
-        "previewImageUrl": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
+        "previewImageUrl": "https://drive.google.com/uc?id=1rFlFx1EXiWVpym4BCS5kfSmyodU3dIpP"
       },
       "notOpen": {
         "type": "video",
-        "originalContentUrl": "https://drive.google.com/uc?id=1yv5EOBk2KuumaMBRziwQNNRmydnEb6K2",
-        "previewImageUrl": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
+        "originalContentUrl": "https://drive.google.com/uc?id=1l15dRP9ZharJmDxXzPbzeSeW7dXysAYO",
+        "previewImageUrl": "https://drive.google.com/uc?id=1rFlFx1EXiWVpym4BCS5kfSmyodU3dIpP"
       },
       "delete": {
         "type": "video",
-        "originalContentUrl": "https://drive.google.com/uc?id=1yv5EOBk2KuumaMBRziwQNNRmydnEb6K2",
-        "previewImageUrl": "https://drive.google.com/uc?id=1rrkHX1ZkHZUPuZr8kuCP7X1hd8AvONT4"
+        "originalContentUrl": "https://drive.google.com/uc?id=1l15dRP9ZharJmDxXzPbzeSeW7dXysAYO",
+        "previewImageUrl": "https://drive.google.com/uc?id=1rFlFx1EXiWVpym4BCS5kfSmyodU3dIpP"
       }
     },
     "falseMail": {
