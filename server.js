@@ -96,7 +96,10 @@ const handleEvent = event => {
     }
   }
   console.log(message);
-  return client.replyMessage(event.replyToken, message);
+  return client.replyMessage(event.replyToken, [
+    message,
+    { type: "text", text: "2nd message" }
+  ]);
 };
 
 app.get("/", (req, res) => res.send("Hello LINE BOT!(GET)")); // ブラウザ確認用(無くても問題ない)
