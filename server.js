@@ -95,7 +95,7 @@ const handleEvent = event => {
       message = messagejson.error.notEvent;
     }
   }
-  console.log(message);
+
   return client.replyMessage(event.replyToken, [
     message,
     { type: "text", text: "2nd message" }
@@ -111,4 +111,3 @@ app.post("/webhook", line.middleware(config), (req, res) => {
 });
 
 app.listen(PORT);
-console.log(`Server running at ${PORT}`);
