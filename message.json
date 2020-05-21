@@ -1,129 +1,507 @@
 {
-  "trueMail": {
+  "Truemail": {
     "type": "template",
     "altText": "This is a buttons template",
     "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://drive.google.com/uc?id=1kMn54QqHrbP0dwaB0EZYS6nDlVqli13k",
-      "imageSize": "cover",
-      "title": "メールが届きました！",
-      "text": "あなたは何をしますか？",
-      "defaultAction": {
-        "type": "uri",
-        "label": "メールの内容を見る",
-        "uri": "https://drive.google.com/uc?id=1kMn54QqHrbP0dwaB0EZYS6nDlVqli13k"
-      },
-      "actions": [
-        {
-          "type": "postback",
-          "label": "URLを開く",
-          "data": "trueMailOpen"
-        },
-        {
-          "type": "postback",
-          "label": "URLを開かない",
-          "data": "trueMailNotOpen"
-        },
-        {
-          "type": "postback",
-          "label": "メールを削除する",
-          "data": "trueMailDelete"
-        }
-      ]
-    }
-  },
-
-  "falseMail": {
-    "type": "template",
-    "altText": "This is a buttons template",
-    "template": {
-      "type": "buttons",
-      "thumbnailImageUrl": "https://drive.google.com/uc?id=1kgylYF9DDl73GBrJBf5RIGAN0yMLXBIs",
+      "thumbnailImageUrl": "https://drive.google.com/uc?id=1masv7H8Wk28x5ifOMdS-J1Zc6DFDMS87",
       "imageAspectRatio": "rectangle",
       "imageSize": "cover",
       "imageBackgroundColor": "#FFFFFF",
-      "title": "You receved mail,but false mail!!!",
-      "text": "Please select action",
+      "title": "メールを受信しました",
+      "text": "画像を確認し、下のボタンをタップしてください",
       "defaultAction": {
         "type": "uri",
         "label": "View detail",
-        "uri": "https://drive.google.com/uc?id=1kgylYF9DDl73GBrJBf5RIGAN0yMLXBIs"
+        "uri": "https://drive.google.com/uc?id=1masv7H8Wk28x5ifOMdS-J1Zc6DFDMS87"
       },
       "actions": [
         {
           "type": "postback",
-          "label": "Open",
-          "data": "falseMailOpen"
+          "label": "開く",
+          "data": "Truemail_Open"
         },
         {
           "type": "postback",
-          "label": "NotOpen",
-          "data": "falseMailNotOpen"
-        },
-        {
-          "type": "postback",
-          "label": "Delete",
-          "data": "falseMailDelete"
+          "label": "開かない",
+          "data": "Truemail_Notopen"
         }
       ]
     }
   },
-
-  "postback": {
-    "trueMail": {
-      "open": {
-        "type": "video",
-        "originalContentUrl": "https://drive.google.com/uc?id=18zola2jG4CFD2pnKdkVzPOCH-G8R0uu7",
-        "previewImageUrl": "https://drive.google.com/uc?id=1rFlFx1EXiWVpym4BCS5kfSmyodU3dIpP"
+  "Falsemail1": {
+    "type": "template",
+    "altText": "This is a buttons template",
+    "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://drive.google.com/uc?id=13hnnwj-1K7MJCie-d2hMN44p_VqK1LbZ",
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "メールを受信しました",
+      "text": "画像を確認し、下のボタンをタップしてください",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://drive.google.com/uc?id=13hnnwj-1K7MJCie-d2hMN44p_VqK1LbZ"
       },
-      "notOpen": {
-        "type": "video",
-        "originalContentUrl": "https://drive.google.com/uc?id=1l15dRP9ZharJmDxXzPbzeSeW7dXysAYO",
-        "previewImageUrl": "https://drive.google.com/uc?id=1rFlFx1EXiWVpym4BCS5kfSmyodU3dIpP"
-      },
-      "delete": {
-        "type": "video",
-        "originalContentUrl": "https://drive.google.com/uc?id=1l15dRP9ZharJmDxXzPbzeSeW7dXysAYO",
-        "previewImageUrl": "https://drive.google.com/uc?id=1rFlFx1EXiWVpym4BCS5kfSmyodU3dIpP"
-      }
-    },
-    "falseMail": {
-      "open": {
-        "type": "text",
-        "text": "ウィルスに感染しました！"
-      },
-      "notOpen": {
-        "type": "text",
-        "text": "そうです！開いてはいけません！"
-      },
-      "delete": {
-        "type": "text",
-        "text": "そうです！削除してください！"
-      }
+      "actions": [
+        {
+          "type": "postback",
+          "label": "開く",
+          "data": "Falsemail1_Open"
+        },
+        {
+          "type": "postback",
+          "label": "開かない",
+          "data": "Falsemail_Notopen1"
+        }
+      ]
     }
   },
-
-  "maintenance": {
-    "type": "text",
-    "text": "メンテナンス中です"
+  "Falsemail2": {
+    "type": "template",
+    "altText": "This is a buttons template",
+    "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://drive.google.com/uc?id=1uTO6EJT1Bpn_UeZ_xhPyGuRXi_QN0BgD",
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "メールを受信しました",
+      "text": "画像を確認し、下のボタンをタップしてください",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://drive.google.com/uc?id=1uTO6EJT1Bpn_UeZ_xhPyGuRXi_QN0BgD"
+      },
+      "actions": [
+        {
+          "type": "postback",
+          "label": "開く",
+          "data": "Falsemail2_Open"
+        },
+        {
+          "type": "postback",
+          "label": "開かない",
+          "data": "Falsemail_Notopen1"
+        }
+      ]
+    }
+  },
+  "Falsemail3": {
+    "type": "template",
+    "altText": "This is a buttons template",
+    "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://drive.google.com/uc?id=1_DPI3hVncsK7uXXeYpfYmuVluqBd85uo",
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "メールを受信しました",
+      "text": "画像を確認し、下のボタンをタップしてください",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://drive.google.com/uc?id=1_DPI3hVncsK7uXXeYpfYmuVluqBd85uo"
+      },
+      "actions": [
+        {
+          "type": "postback",
+          "label": "開く",
+          "data": "Falsemail3_Open"
+        },
+        {
+          "type": "postback",
+          "label": "開かない",
+          "data": "Falsemail_Notopen1"
+        }
+      ]
+    }
+  },
+  "postback": {
+    "Falsemail1": {
+      "Realize": {
+        "_Comment_Falsemail1_Realize":"",
+        "type": "image",
+        "originalContentUrl": "https://drive.google.com/uc?id=1K-I_q4fLOrhpmlTqeAkyOCBltlNHvwVX",
+        "previewImageUrl": "https://drive.google.com/uc?id=1K-I_q4fLOrhpmlTqeAkyOCBltlNHvwVX"
+      },
+      "Open1_Next1":{
+        "_Comment_Falsemail1_Open1_Next1":"",
+        "type": "template",
+        "altText": "This is a buttons template",
+        "template": {
+            "type": "buttons",
+            "text": "結果発表を確認しましたか？",
+            "actions": [
+                {
+                  "type" : "postback",
+                  "label": "はい",
+                  "data" : "Falsemail1_Open_Next1"
+                }
+            ]
+        }
+      },
+      "Open1_Next2":{
+        "_Comment_Falsemail1_Open1_Next2":"",
+        "type": "template",
+        "altText": "this is a confirm template",
+        "template": {
+            "type": "confirm",
+            "text": "次へ進みますか？",
+            "actions": [
+                {
+                    "type": "postback",
+                    "label": "はい",
+                    "data": "Falsemail_Open_Next2"
+                },
+                {
+                  "type": "postback",
+                  "label": "いいえ",
+                  "data": "Falsemail1_Open_Next1"
+              }
+            ]
+        }
+     }
+    },
+    "Falsemail2": {
+      "Realize": {
+        "_Comment_Falsemail2_Realize":"",
+        "type": "image",
+        "originalContentUrl": "https://drive.google.com/uc?id=1zLypyXeuiFVDXI_8HXDKW_zLnm2jtS-0",
+        "previewImageUrl": "https://drive.google.com/uc?id=1zLypyXeuiFVDXI_8HXDKW_zLnm2jtS-0"
+      },
+      "Open1_Next1":{
+        "_Comment_Falsemail12_Open1_Next1":"",
+        "type": "template",
+        "altText": "This is a buttons template",
+        "template": {
+            "type": "buttons",
+            "text": "結果発表を確認しましたか？",
+            "actions": [
+                {
+                  "type" : "postback",
+                  "label": "はい",
+                  "data" : "Falsemail2_Open_Next1"
+                }
+            ]
+        }
+      },
+     "Open1_Next2":{
+      "_Comment_Falsemail2_Open1_Next2":"",
+       "type": "template",
+       "altText": "this is a confirm template",
+       "template": {
+          "type": "confirm",
+          "text": "次へ進みますか？",
+          "actions": [
+              {
+                  "type": "postback",
+                  "label": "はい",
+                  "data": "Falsemail_Open_Next2"
+              },
+              {
+                "type": "postback",
+                "label": "いいえ",
+                "data": "Falsemail2_Open_Next1"
+            }
+          ]
+        }
+      }
+    },
+    "Falsemail3": {
+      "Realize": {
+        "_Comment_Falsemail3_Realize":"",
+        "type": "image",
+        "originalContentUrl": "https://drive.google.com/uc?id=1j9eAe_ppXNRif0oKIdSxeH2yxiptBxvO",
+        "previewImageUrl": "https://drive.google.com/uc?id=1j9eAe_ppXNRif0oKIdSxeH2yxiptBxvO"
+      },
+      "Open1_Next1":{
+        "_Comment_Falsemail3_Open1_Next1":"",
+        "type": "template",
+        "altText": "This is a buttons template",
+        "template": {
+            "type": "buttons",
+            "text": "結果発表を確認しましたか？",
+            "actions": [
+                {
+                  "type" : "postback",
+                  "label": "はい",
+                  "data" : "Falsemail3_Open_Next1"
+                }
+            ]
+        }
+      },
+     "Open1_Next2":{
+      "_Comment_Falsemail3_Open1_Next2":"",
+       "type": "template",
+       "altText": "this is a confirm template",
+       "template": {
+          "type": "confirm",
+          "text": "次へ進みますか？",
+          "actions": [
+              {
+                  "type": "postback",
+                  "label": "はい",
+                  "data": "Falsemail_Open_Next2"
+              },
+              {
+                "type": "postback",
+                "label": "いいえ",
+                "data": "Falsemail3_Open_Next1"
+            }
+          ]
+        }
+      }
+    },
+    "Falsemail": {
+      "Open1": {
+        "_Comment_Falsemail_Open1":"",
+        "type": "video",
+        "originalContentUrl": "https://drive.google.com/uc?id=1EvB4eSTKR_Kio0r7p2Mrbne5A6OUrKqt",
+        "previewImageUrl": "https://drive.google.com/uc?id=1Z2NYrQmgoOpNFGDj3QmrfEz8smxM5qBg"
+      },
+      "Open2": {
+        "_Comment_Falsemail_Open2":"",
+        "type": "template",
+        "altText": "this is a image carousel template",
+        "template": {
+            "type": "image_carousel",
+            "columns": [
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1odZ-rqKdghifWM8RLSH0qNxkI_t8Hxww",
+                  "action": {
+                    "type": "postback",
+                    "label": "何もしない",
+                    "data": "Falsemail_Open2_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1afzFrGSOQN0CQHWnEAbe8FuRE9ayWJOb",
+                  "action": {
+                    "type": "postback",
+                    "label": "LANケーブルを抜く",
+                    "data": "Falsemail_Open2_Disconnectlan"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1du3UAK7hFA594GnM9xaBl_cRY3x1qDjm",
+                  "action": {
+                    "type": "postback",
+                    "label": "メール削除",
+                    "data": "Falsemail_Open2_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1U3HMEtwSBZDoRCLyaMlI1DVNbIXW_IDZ",
+                  "action": {
+                    "type": "postback",
+                    "label": "不審ﾒｰﾙの転送",
+                    "data": "Falsemail_Open2_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1xHsS77ELcXa1ex_3EBUaC-wxvV1Yaxsd",
+                  "action": {
+                    "type": "postback",
+                    "label": "情報ｼｽﾃﾑGへ連絡",
+                    "data": "Falsemail_Open2_NG"
+                  }
+                }
+            ]
+        }
+      },
+      "Disconnectlan": {
+        "_Comment_Falsemail_Open2_Disconnectlan":"",
+        "type": "template",
+        "altText": "this is a image carousel template",
+        "template": {
+            "type": "image_carousel",
+            "columns": [
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1odZ-rqKdghifWM8RLSH0qNxkI_t8Hxww",
+                  "action": {
+                    "type": "postback",
+                    "label": "何もしない",
+                    "data": "Falsemail_Open2_Disconnectlan_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1du3UAK7hFA594GnM9xaBl_cRY3x1qDjm",
+                  "action": {
+                    "type": "postback",
+                    "label": "メール削除",
+                    "data": "Falsemail_Open2_Disconnectlan_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1xHsS77ELcXa1ex_3EBUaC-wxvV1Yaxsd",
+                  "action": {
+                    "type": "postback",
+                    "label": "情報ｼｽﾃﾑGへ連絡",
+                    "data": "Falsemail_Open2_Disconnectlan_Contact"
+                  }
+                }
+            ]
+        }
+      },
+      "Notopen1": {
+        "_comment_Falsemail_Notopen1":"",
+        "type": "video",
+        "originalContentUrl": "https://drive.google.com/uc?id=10hpIj2NTeodpvNcshZi4V2NAsKCvhG9w",
+        "previewImageUrl": "https://drive.google.com/uc?id=1Z2NYrQmgoOpNFGDj3QmrfEz8smxM5qBg"
+      },
+      "Open1_Next1":{
+        "_Comment_Falsemail1_Open1_Next0":"",
+        "type": "template",
+        "altText": "This is a buttons template",
+        "template": {
+            "type": "buttons",
+            "text": "結果発表を確認しましたか？",
+            "actions": [
+                {
+                  "type" : "postback",
+                  "label": "はい",
+                  "data" : "Falsemail2_Open_Next1"
+                }
+            ]
+        }
+      },
+      "Notopen1_Next":{
+        "_comment_Falsemail_Notopen1_Next":"",
+        "type": "template",
+        "altText": "This is a buttons template",
+        "template": {
+            "type": "buttons",
+            "text": "結果発表を確認しましたか？",
+            "actions": [
+                {
+                  "type" : "postback",
+                  "label": "はい",
+                  "data" : "Falsemail_Notopen1_Nextyes"
+                }
+            ]
+        }
+       },
+      "Notopen2": {
+        "_comment_Falsemail_Notopen2":"",
+        "type": "template",
+        "altText": "this is a image carousel template",
+        "template": {
+            "type": "image_carousel",
+            "columns": [
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1odZ-rqKdghifWM8RLSH0qNxkI_t8Hxww",
+                  "action": {
+                    "type": "postback",
+                    "label": "何もしない",
+                    "data": "Falsemail_Notopen2_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1afzFrGSOQN0CQHWnEAbe8FuRE9ayWJOb",
+                  "action": {
+                    "type": "postback",
+                    "label": "LANケーブルを抜く",
+                    "data": "Falsemail_Notopen2_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1du3UAK7hFA594GnM9xaBl_cRY3x1qDjm",
+                  "action": {
+                    "type": "postback",
+                    "label": "メール削除",
+                    "data": "Falsemail_Notopen2_Delete_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1U3HMEtwSBZDoRCLyaMlI1DVNbIXW_IDZ",
+                  "action": {
+                    "type": "postback",
+                    "label": "不審ﾒｰﾙの転送",
+                    "data": "Falsemail_Notopen2_Transfer"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1xHsS77ELcXa1ex_3EBUaC-wxvV1Yaxsd",
+                  "action": {
+                    "type": "postback",
+                    "label": "情報ｼｽﾃﾑGへ連絡",
+                    "data": "Falsemail_Notopen2_NG"
+                  }
+                }
+            ]
+        }
+      },
+      "Transfer": {
+        "_Comment_Falsemail_Notopen2_Transfer":"",
+        "type": "template",
+        "altText": "this is a image carousel template",
+        "template": {
+            "type": "image_carousel",
+            "columns": [
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1odZ-rqKdghifWM8RLSH0qNxkI_t8Hxww",
+                  "action": {
+                    "type": "postback",
+                    "label": "何もしない",
+                    "data": "Falsemail_Notopen2_Transfer_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1afzFrGSOQN0CQHWnEAbe8FuRE9ayWJOb",
+                  "action": {
+                    "type": "postback",
+                    "label": "LANケーブルを抜く",
+                    "data": "Falsemail_Notopen2_Transfer_NG"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1du3UAK7hFA594GnM9xaBl_cRY3x1qDjm",
+                  "action": {
+                    "type": "postback",
+                    "label": "メール削除",
+                    "data": "Falsemail_Notopen2_Transfer_Delete"
+                  }
+                },
+                {
+                  "imageUrl": "https://drive.google.com/uc?id=1xHsS77ELcXa1ex_3EBUaC-wxvV1Yaxsd",
+                  "action": {
+                    "type": "postback",
+                    "label": "情報ｼｽﾃﾑGへ連絡",
+                    "data": "Falsemail_Notopen2_Transfer_NG"
+                  }
+                }
+            ]
+        }
+      },
+      "_Comment_Falsemail_Realize":"Falsemailの正しい手順",      
+      "Realize13": {
+        "type": "image",
+        "originalContentUrl": "https://drive.google.com/uc?id=1p3Yh64Td704jIJWceFHIcqlJ6V8FlEoq",
+        "previewImageUrl": "https://drive.google.com/uc?id=1p3Yh64Td704jIJWceFHIcqlJ6V8FlEoq"
+      },
+      "Realize14": {
+        "type": "image",
+        "originalContentUrl": "https://drive.google.com/uc?id=1Q1hAd4LyH5qBaEGFxAnVuPxVhAUFgaB2",
+        "previewImageUrl": "https://drive.google.com/uc?id=1Q1hAd4LyH5qBaEGFxAnVuPxVhAUFgaB2"
+      },
+      "Realize21": {
+        "type": "image",
+        "originalContentUrl": "https://drive.google.com/uc?id=1zSYAGYzFSv5YwUefebjOilolnKeb8mZe",
+        "previewImageUrl": "https://drive.google.com/uc?id=1zSYAGYzFSv5YwUefebjOilolnKeb8mZe"
+      },
+      "Realize22": {
+        "type": "image",
+        "originalContentUrl": "https://drive.google.com/uc?id=15UwCUmWkI4v2tqAOCW5RXIrHUuXcLdZk",
+        "previewImageUrl": "https://drive.google.com/uc?id=15UwCUmWkI4v2tqAOCW5RXIrHUuXcLdZk"
+      }
   },
 
-  "error": {
-    "wrongMessageType": {
-      "type": "text",
-      "text": "そのメッセージには、対応できません！"
-    },
-    "wrongText": {
-      "type": "text",
-      "text": "そのテキストには、対応できません！"
-    },
-    "notEvent": {
-      "type": "text",
-      "text": "イベントではありません！"
-    },
-    "wrongPostback": {
-      "type": "text",
-      "text": "POSTBACKが誤っています！"
+   "maintenance": {
+    "type": "text",
+    "text": "メンテナンス中です"
     }
   }
 }
