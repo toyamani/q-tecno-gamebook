@@ -28,7 +28,7 @@ function handleEvent(event) {
       switch (event.message.type) {
         case "text": {
           switch (event.message.text) {
-            case "不審メール対応START": {
+            case "迷惑メールモードSTART": {
               const result = getRandom(1, 4); // 乱数で正常or不審メールを選択する
               // 一時---
               // result = 4;
@@ -57,11 +57,24 @@ function handleEvent(event) {
               }
               break;
             }
-            case "不審メール対応の説明": {
+            case "Q-TECNO QUEST START": {
               retmessage[0] = {
                 type: "text",
-                text:
-                  "不審メールを見分け、正しく対応できるか確認します。メニューの「不審メール対応に挑戦」でスタートしてください。",
+                text: "このモードはメンテナンス中です",
+              };
+              break;
+            }
+            case "諦める": {
+              retmessage[0] = {
+                type: "text",
+                text: "諦めるのはまだ早い！！！！",
+              };
+              break;
+            }
+            case "HELP": {
+              retmessage[0] = {
+                type: "text",
+                text: "ヘルプメニューは、メンテナンス中です。",
               };
               break;
             }
@@ -87,7 +100,7 @@ function handleEvent(event) {
     case "postback": {
       switch (event.postback.data) {
         case "Truemail_Open": {
-          //完了
+          // 完了
           retmessage[0] = {
             type: "text",
             text:
@@ -96,7 +109,7 @@ function handleEvent(event) {
           break;
         }
         case "Truemail_Notopen": {
-          //完了
+          // 完了
           retmessage[0] = {
             type: "text",
             text:
@@ -110,73 +123,73 @@ function handleEvent(event) {
           break;
         }
         case "Falsemail1_Open": {
-          //完了
-          retmessage[0] = messagejson.postback.Falsemail.Open1; //感染動画
-          retmessage[1] = messagejson.postback.Falsemail1.Open1_Next1; //次へボタン
+          // 完了
+          retmessage[0] = messagejson.postback.Falsemail.Open1; // 感染動画
+          retmessage[1] = messagejson.postback.Falsemail1.Open1_Next1; // 次へボタン
           break;
         }
         case "Falsemail1_Open_Next1": {
-          //完了
+          // 完了
           retmessage[0] = {
             type: "text",
             text:
               "受信したメールは不審メールでした、下の気付きポイントを確認してください",
           };
-          retmessage[1] = messagejson.postback.Falsemail1.Realize; //気付きポイント画像
-          retmessage[2] = messagejson.postback.Falsemail1.Open1_Next2; //次へボタン
+          retmessage[1] = messagejson.postback.Falsemail1.Realize; // 気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail1.Open1_Next2; // 次へボタン
           break;
         }
         case "Falsemail_Open_Next2": {
-          //完了
+          // 完了
           retmessage[0] = {
             type: "text",
             text: "次はどう対応しますか",
           };
-          retmessage[1] = messagejson.postback.Falsemail.Open2; //次の選択肢
+          retmessage[1] = messagejson.postback.Falsemail.Open2; // 次の選択肢
           break;
         }
         case "Falsemail2_Open": {
-          //完了
-          retmessage[0] = messagejson.postback.Falsemail.Open1; //感染動画
-          retmessage[1] = messagejson.postback.Falsemail2.Open1_Next1; //次へボタン
+          // 完了
+          retmessage[0] = messagejson.postback.Falsemail.Open1; // 感染動画
+          retmessage[1] = messagejson.postback.Falsemail2.Open1_Next1; // 次へボタン
           break;
         }
         case "Falsemail2_Open_Next1": {
-          //完了
+          // 完了
           retmessage[0] = {
             type: "text",
             text:
               "受信したメールは不審メールでした、下の気付きポイントを確認してください",
           };
-          retmessage[1] = messagejson.postback.Falsemail2.Realize; //気付きポイント画像
-          retmessage[2] = messagejson.postback.Falsemail2.Open1_Next2; //次へボタン
+          retmessage[1] = messagejson.postback.Falsemail2.Realize; // 気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail2.Open1_Next2; // 次へボタン
           break;
         }
         case "Falsemail3_Open": {
-          //完了
-          retmessage[0] = messagejson.postback.Falsemail.Open1; //感染動画
-          retmessage[1] = messagejson.postback.Falsemail3.Open1_Next1; //次へボタン
+          // 完了
+          retmessage[0] = messagejson.postback.Falsemail.Open1; // 感染動画
+          retmessage[1] = messagejson.postback.Falsemail3.Open1_Next1; // 次へボタン
           break;
         }
         case "Falsemail3_Open_Next1": {
-          //完了
+          // 完了
           retmessage[0] = {
             type: "text",
             text:
               "受信したメールは不審メールでした、下の気付きポイントを確認してください",
           };
-          retmessage[1] = messagejson.postback.Falsemail3.Realize; //気付きポイント画像
-          retmessage[2] = messagejson.postback.Falsemail3.Open1_Next2; //次へボタン
+          retmessage[1] = messagejson.postback.Falsemail3.Realize; // 気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail3.Open1_Next2; // 次へボタン
           break;
         }
         case "Falsemail_Notopen1": {
-          //完了
-          retmessage[0] = messagejson.postback.Falsemail.Notopen1; //正解画像もしくは動画
-          retmessage[1] = messagejson.postback.Falsemail.Notopen1_Next; //次へ
+          // 完了
+          retmessage[0] = messagejson.postback.Falsemail.Notopen1; // 正解画像もしくは動画
+          retmessage[1] = messagejson.postback.Falsemail.Notopen1_Next; // 次へ
           break;
         }
         case "Falsemail_Notopen1_Nextyes": {
-          //完了
+          // 完了
           retmessage[0] = {
             type: "text",
             text:
@@ -186,7 +199,7 @@ function handleEvent(event) {
             type: "text",
             text: "次はどう対応しますか",
           };
-          retmessage[2] = messagejson.postback.Falsemail.Notopen2; //次の選択肢
+          retmessage[2] = messagejson.postback.Falsemail.Notopen2; // 次の選択肢
           break;
         }
         case "Falsemail_Open2_NG": {
@@ -200,7 +213,7 @@ function handleEvent(event) {
             text:
               "下の気付きポイントを確認して再挑戦してください、これで不審メール対応フローを終了します。お疲れ様でした。",
           };
-          retmessage[2] = messagejson.postback.Falsemail.Realize21; //気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail.Realize21; // 気付きポイント画像
           break;
         }
         case "Falsemail_Open2_Disconnectlan": {
@@ -236,7 +249,7 @@ function handleEvent(event) {
             text:
               "下の気付きポイントを確認して再挑戦してください、これで不審メール対応フローを終了します。お疲れ様でした。",
           };
-          retmessage[2] = messagejson.postback.Falsemail.Realize22; //気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail.Realize22; // 気付きポイント画像
           break;
         }
         case "Falsemail_Notopen2_Delete_NG": {
@@ -249,7 +262,7 @@ function handleEvent(event) {
             text:
               "下の気付きポイントを確認して再挑戦してください、これで不審メール対応フローを終了します。お疲れ様でした。",
           };
-          retmessage[2] = messagejson.postback.Falsemail.Realize13; //気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail.Realize13; // 気付きポイント画像
           break;
         }
         case "Falsemail_Notopen2_NG": {
@@ -263,7 +276,7 @@ function handleEvent(event) {
             text:
               "下の気付きポイントを確認して再挑戦してください、これで不審メール対応フローを終了します。お疲れ様でした。",
           };
-          retmessage[2] = messagejson.postback.Falsemail.Realize13; //気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail.Realize13; // 気付きポイント画像
           break;
         }
         case "Falsemail_Notopen2_Transfer": {
@@ -286,7 +299,7 @@ function handleEvent(event) {
             text:
               "下の気付きポイントを確認して再挑戦してください、これで不審メール対応フローを終了します。お疲れ様でした。",
           };
-          retmessage[2] = messagejson.postback.Falsemail.Realize14; //気付きポイント画像
+          retmessage[2] = messagejson.postback.Falsemail.Realize14; // 気付きポイント画像
           break;
         }
         case "Falsemail_Notopen2_Transfer_Delete": {
